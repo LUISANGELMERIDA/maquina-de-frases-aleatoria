@@ -49,15 +49,15 @@ function getQuote() {
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
 
-  $('#tweet-quote').attr(
+  $('#insta-quote').attr(
     'href',
-    'https://twitter.com/' +
+    'https://www.instagram.com/?hl=es' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
   );
 
-  $('#tumblr-quote').attr(
+  $('#face-quote').attr(
     'href',
-    'https://www.facebook.com/' +
+    'https://www.facebook.com/login/?locale=es_LA' +
       encodeURIComponent(currentAuthor) +
       '&content=' +
       encodeURIComponent(currentQuote) +
