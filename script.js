@@ -49,9 +49,9 @@ function getQuote() {
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
 
-  $('#inst-quote').attr(
+  $('#tweet-quote').attr(
     'href',
-    'https://www.instagram.com/?hl=es' +
+    'twitter.com/intent/tweet' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
   );
 
