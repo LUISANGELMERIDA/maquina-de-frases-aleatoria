@@ -49,13 +49,13 @@ function getQuote() {
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
 
-  $('#insta-quote').attr(
+  $('#inst-quote').attr(
     'href',
     'https://www.instagram.com/?hl=es' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
   );
 
-  $('#face-quote').attr(
+  $('#fac-quote').attr(
     'href',
     'https://www.facebook.com/login/?locale=es_LA' +
       encodeURIComponent(currentAuthor) +
