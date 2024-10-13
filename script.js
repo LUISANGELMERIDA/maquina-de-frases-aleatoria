@@ -53,17 +53,8 @@ function getQuote() {
     'href',
     'twitter.com/intent/tweet' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
-  );
-
-  $('#fac-quote').attr(
-    'href',
-    'https://www.facebook.com/login/?locale=es_LA' +
-      encodeURIComponent(currentAuthor) +
-      '&content=' +
-      encodeURIComponent(currentQuote) +
-      '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button'
-  );
-
+  ); 
+ 
   $('.quote-text').animate({ opacity: 0 }, 500, function () {
     $(this).animate({ opacity: 1 }, 500);
     $('#text').text(randomQuote.quote);
