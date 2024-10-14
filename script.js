@@ -1,6 +1,4 @@
-import ReactDOM from "react-dom";
-import App from "./App";
-ReactDOM.render(<App />, document.getElementById("root"));
+function inIframe(){try{return window.self!==window.top;}catch (e){return true;}}
 
 let quotesData;
 
@@ -50,10 +48,16 @@ function getQuote() {
   currentAuthor = randomQuote.author;
 
   $('#tweet-quote').attr(
-    'href',
-    'twitter.com/intent/tweet' +
+    'href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
-  ); 
+  );
+
+  $('#face-quote').attr(
+    'href',
+    'https://www.facebook.com/?locale=es_LA&_rdr' +
+      encodeURIComponent(currentAuthor) +
+      '&content=' +
+      encodeURIComponent(currentQuote));
  
   $('.quote-text').animate({ opacity: 0 }, 500, function () {
     $(this).animate({ opacity: 1 }, 500);
